@@ -91,10 +91,11 @@ p { margin: 0; }
   z-index: 40;
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 6px 16px;
+  gap: 12px;
+  padding: calc(8px + env(safe-area-inset-top)) 12px 8px;
   background: transparent;
   border-bottom: 0;
+  transform: translateZ(0);
   transition: background 0.25s ease, border-color 0.25s ease;
 }
 
@@ -103,14 +104,15 @@ p { margin: 0; }
   border-bottom: 1px solid rgba(244, 238, 228, 0.12);
 }
 
-.brand { width: 196px; margin-left: auto; flex: 0 0 auto; }
+.brand { width: 132px; margin-left: auto; flex: 0 0 auto; }
 .brand img {
   width: 100%;
   height: auto;
-  filter: brightness(0) invert(1);
+  filter: drop-shadow(0 1px 2px rgba(54, 13, 19, 0.55));
 }
 
 .menu-toggle {
+  display: none;
   width: 42px;
   height: 42px;
   border: 1px solid rgba(255, 255, 255, 0.55);
@@ -145,7 +147,15 @@ body.nav-open .menu-toggle-bars { background: transparent; }
 body.nav-open .menu-toggle-bars::before { top: 0; transform: rotate(40deg); }
 body.nav-open .menu-toggle-bars::after { top: 0; transform: rotate(-40deg); }
 
-.rail-nav, .top-phone { display: none; }
+.rail-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  min-width: 0;
+}
+.rail-nav a:first-child { display: none; }
+.top-phone { display: none; }
 
 body.nav-open .top {
   flex-wrap: wrap;
@@ -168,15 +178,16 @@ body.nav-open .rail-nav a {
 .top-phone {
   color: #fff;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 400;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  text-shadow: 0 1px 3px rgba(54, 13, 19, 0.65);
 }
 .rail-nav a:hover,
 .top-phone:hover { color: var(--cream); }
 .top.is-solid .rail-nav a,
-.top.is-solid .top-phone { color: var(--cream); }
+.top.is-solid .top-phone { color: var(--cream); text-shadow: none; }
 .top.is-solid .rail-nav a:hover,
 .top.is-solid .top-phone:hover { color: #fff; }
 
@@ -242,9 +253,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: #4e2529;
-  mix-blend-mode: multiply;
-  opacity: 0.28;
+  background: rgba(78, 37, 41, 0.28);
 }
 
 .hero-veil {
@@ -475,8 +484,9 @@ textarea { resize: vertical; min-height: 110px; }
 
 @media (min-width: 980px) {
   .top { padding: 6px 36px; }
-  .menu-toggle { display: none; }
-  .rail-nav { display: flex; align-items: center; gap: 22px; }
+  .rail-nav { flex-wrap: nowrap; gap: 22px; }
+  .rail-nav a:first-child { display: inline; }
+  .rail-nav a { font-size: 12px; letter-spacing: 0.12em; text-shadow: none; }
   .top-phone {
     display: inline;
     color: var(--cream);
