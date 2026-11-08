@@ -396,18 +396,10 @@ textarea:focus-visible {
   font-family: var(--serif);
   font-weight: 400;
   font-size: clamp(18px, 1.7vw, 23px);
-  line-height: 1.5;
-  quotes: "“" "”";
+  line-height: 1.45;
 }
-.objetivo blockquote p::before,
-.objetivo blockquote p::after {
-  color: var(--beige);
-  font-size: 1.45em;
-  line-height: 0;
-}
-.objetivo blockquote p::before { content: open-quote; margin-right: 0.15em; }
-.objetivo blockquote p::after { content: close-quote; margin-left: 0.06em; }
-.objetivo blockquote p span { display: block; margin-top: 0.7em; }
+.objetivo blockquote p .segue { display: block; }
+.objetivo blockquote p .fim { white-space: nowrap; }
 
 .contact-grid { display: grid; gap: 28px; }
 .who { margin: 22px 0 0; display: grid; gap: 14px; }
