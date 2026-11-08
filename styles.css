@@ -478,10 +478,10 @@ textarea { resize: vertical; min-height: 110px; }
 
 .why {
   position: relative;
-  min-height: 88vh;
-  min-height: 88dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
   background: #360d13;
 }
@@ -491,7 +491,7 @@ textarea { resize: vertical; min-height: 110px; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 58% 38%;
+  object-position: 62% 48%;
 }
 .why-media::after {
   content: "";
@@ -526,16 +526,16 @@ textarea { resize: vertical; min-height: 110px; }
 }
 .razoes {
   list-style: none;
-  margin: 36px 0 0;
+  margin: 22px 0 0;
   padding: 0;
   display: grid;
-  gap: 16px;
-  max-width: 46em;
+  gap: 12px;
+  max-width: 34em;
 }
 .razoes li {
   margin: 0;
-  font-size: 17px;
-  line-height: 1.45;
+  font-size: 16px;
+  line-height: 1.4;
 }
 .razoes strong { color: #c1b398; font-weight: 500; }
 
@@ -600,7 +600,8 @@ textarea { resize: vertical; min-height: 110px; }
 
 @media (min-width: 980px) {
   .why-copy { padding: 120px 64px; }
-  .why-media img { object-position: 62% 36%; }
+  .why-media img { object-position: 64% 48%; }
+  .why-copy { width: min(560px, 46%); }
   .top { padding: 6px 36px; }
   .rail-nav { flex-wrap: nowrap; gap: 22px; }
   .rail-nav a:first-child { display: inline; }
