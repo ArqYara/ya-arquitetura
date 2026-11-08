@@ -46,7 +46,7 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; color-scheme: light; }
+html { scroll-behavior: smooth; color-scheme: only light; }
 
 body {
   margin: 0;
@@ -289,8 +289,9 @@ main {
   min-height: 46px;
   padding: 0 16px;
   border-radius: 12px;
-  border: 1px solid #fff;
-  background: #fff;
+  border: 1px solid #f4eee4;
+  background-color: #f4eee4;
+  background-image: linear-gradient(#f4eee4, #f4eee4);
   color: #360d13;
   -webkit-text-fill-color: #360d13;
   font: inherit;
@@ -301,7 +302,7 @@ main {
   appearance: none;
   color-scheme: light;
 }
-.btn:hover { background: #fff; border-color: #fff; }
+.btn:hover { background-color: #fff; background-image: linear-gradient(#fff, #fff); border-color: #fff; }
 .btn-ghost { background: transparent; color: var(--cream); }
 .btn-ghost:hover { background: var(--cream); color: var(--bg); }
 
@@ -433,6 +434,7 @@ input, select, textarea {
   border: 0;
   border-radius: 10px;
   background-color: #f4eee4;
+  background-image: linear-gradient(#f4eee4, #f4eee4);
   color: #360d13;
   -webkit-text-fill-color: #360d13;
   font: inherit;
@@ -443,9 +445,13 @@ input, select, textarea {
   color-scheme: light;
 }
 select {
-  background-image: linear-gradient(45deg, transparent 50%, #360d13 50%), linear-gradient(135deg, #360d13 50%, transparent 50%);
-  background-position: calc(100% - 18px) calc(50% - 2px), calc(100% - 12px) calc(50% - 2px);
-  background-size: 6px 6px, 6px 6px;
+  background-color: #f4eee4;
+  background-image:
+    linear-gradient(#f4eee4, #f4eee4),
+    linear-gradient(45deg, transparent 50%, #360d13 50%),
+    linear-gradient(135deg, #360d13 50%, transparent 50%);
+  background-position: 0 0, calc(100% - 18px) calc(50% - 2px), calc(100% - 12px) calc(50% - 2px);
+  background-size: 100% 100%, 6px 6px, 6px 6px;
   background-repeat: no-repeat;
 }
 input:-webkit-autofill,
@@ -475,7 +481,8 @@ textarea { resize: vertical; min-height: 110px; }
   padding: 22px 18px 18px;
   border-radius: 16px;
   border: 0;
-  background: #f4eee4;
+  background-color: #f4eee4;
+  background-image: linear-gradient(#f4eee4, #f4eee4);
   color: #360d13;
 }
 .stars {
@@ -664,6 +671,34 @@ textarea { resize: vertical; min-height: 110px; }
     align-items: start;
   }
   .colophon { padding: 0 64px 96px; }
+}
+
+@media (max-width: 900px) {
+  a.btn,
+  button.btn,
+  .reviews li,
+  .form input,
+  .form textarea {
+    background-color: #f4eee4 !important;
+    background-image: linear-gradient(#f4eee4, #f4eee4) !important;
+    color: #360d13 !important;
+    -webkit-text-fill-color: #360d13 !important;
+    border-color: #f4eee4 !important;
+    opacity: 1 !important;
+  }
+  .form select {
+    background-color: #f4eee4 !important;
+    background-image:
+      linear-gradient(#f4eee4, #f4eee4),
+      linear-gradient(45deg, transparent 50%, #360d13 50%),
+      linear-gradient(135deg, #360d13 50%, transparent 50%) !important;
+    background-repeat: no-repeat !important;
+    background-position: 0 0, calc(100% - 18px) calc(50% - 2px), calc(100% - 12px) calc(50% - 2px) !important;
+    background-size: 100% 100%, 6px 6px, 6px 6px !important;
+    color: #360d13 !important;
+    -webkit-text-fill-color: #360d13 !important;
+    opacity: 1 !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
