@@ -386,6 +386,7 @@ textarea:focus-visible {
 
 .who-copy { max-width: 40em; font-size: 15px; line-height: 1.5; text-align: justify; }
 .who-copy p + p { margin-top: 8px; }
+.who-copy .kicker + p { margin-top: 3em; }
 .who-copy a, .who a { color: var(--cream); text-decoration: none; }
 
 .objetivo {
@@ -406,6 +407,7 @@ textarea:focus-visible {
 .objetivo blockquote p {
   margin: 0;
   max-width: none;
+  color: #c1b398;
   font-family: var(--serif);
   font-weight: 400;
   font-size: clamp(18px, 1.7vw, 23px);
@@ -592,7 +594,7 @@ textarea { resize: vertical; min-height: 110px; }
   font-size: 17px;
   font-weight: 500;
 }
-.razoes span { display: block; color: #f4eee4; }
+.razoes span { display: block; color: #f4eee4; font-size: 13px; }
 
 .wa {
   position: fixed;
@@ -692,24 +694,31 @@ textarea { resize: vertical; min-height: 110px; }
     position: absolute;
     top: calc(10px + env(safe-area-inset-top));
     right: 10px;
-    width: 158px;
-    height: 34px;
+    width: 136px;
+    height: 30px;
     margin: 0;
     flex: none;
     z-index: 2;
   }
   .brand img {
-    width: 158px;
-    height: 34px;
-    max-width: 158px;
+    width: 136px;
+    height: 30px;
+    max-width: 136px;
     object-fit: contain;
     object-position: right center;
   }
   .rail-nav {
     width: auto;
-    max-width: calc(100% - 176px);
+    max-width: calc(100% - 150px);
     flex: 1 1 auto;
+    flex-wrap: nowrap;
+    gap: 8px;
     min-width: 0;
+  }
+  .rail-nav a {
+    font-size: 9px;
+    letter-spacing: 0;
+    white-space: nowrap;
   }
 }
 
