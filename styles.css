@@ -376,20 +376,38 @@ textarea:focus-visible {
 .who-copy a, .who a { color: var(--cream); }
 
 .objetivo {
-  margin-top: 36px;
-  padding: 32px 28px;
+  margin-top: 28px;
+  padding: 26px 28px 24px;
   max-width: none;
 }
-.objetivo h2 { font-size: clamp(30px, 4vw, 46px); max-width: 16em; }
-.objetivo .kicker { font-size: 15px; letter-spacing: 0.16em; }
-.objetivo p:last-child {
-  margin-top: 16px;
+.objetivo .kicker {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+}
+.objetivo blockquote {
+  margin: 12px 0 0;
+  padding: 0;
+  border: 0;
+}
+.objetivo blockquote p {
+  margin: 0;
   max-width: none;
   font-family: var(--serif);
-  font-weight: 500;
-  font-size: clamp(28px, 3.4vw, 44px);
-  line-height: 1.22;
+  font-weight: 400;
+  font-size: clamp(18px, 1.7vw, 23px);
+  line-height: 1.5;
+  quotes: "“" "”";
 }
+.objetivo blockquote p::before,
+.objetivo blockquote p::after {
+  color: var(--beige);
+  font-size: 1.45em;
+  line-height: 0;
+}
+.objetivo blockquote p::before { content: open-quote; margin-right: 0.15em; }
+.objetivo blockquote p::after { content: close-quote; margin-left: 0.06em; }
+.objetivo blockquote p span { display: block; margin-top: 0.7em; }
 
 .contact-grid { display: grid; gap: 28px; }
 .who { margin: 22px 0 0; display: grid; gap: 14px; }
