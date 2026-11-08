@@ -377,7 +377,7 @@ textarea:focus-visible {
 
 .who-copy { max-width: 40em; font-size: 15px; line-height: 1.5; text-align: justify; }
 .who-copy p + p { margin-top: 8px; }
-.who-copy a, .who a { color: var(--cream); }
+.who-copy a, .who a { color: var(--cream); text-decoration: none; }
 
 .objetivo {
   margin-top: 28px;
