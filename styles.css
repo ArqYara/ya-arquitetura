@@ -474,12 +474,13 @@ textarea { resize: vertical; min-height: 110px; }
   margin: 0;
   padding: 22px 18px 18px;
   border-radius: 16px;
-  border: 1px solid rgba(244, 238, 228, 0.22);
-  background: rgba(42, 10, 16, 0.35);
+  border: 0;
+  background: #f4eee4;
+  color: #360d13;
 }
 .stars {
   margin: 0 0 12px;
-  color: #c1b398;
+  color: #360d13;
   letter-spacing: 0.14em;
   font-size: 14px;
 }
@@ -487,7 +488,7 @@ textarea { resize: vertical; min-height: 110px; }
 .reviews blockquote { margin: 0; padding: 0; border: 0; }
 .reviews blockquote p { margin: 0; font-size: 15px; line-height: 1.5; }
 .review-name { margin: 16px 0 0; }
-.review-meta { margin: 2px 0 0; color: #c1b398; font-size: 13px; }
+.review-meta { margin: 2px 0 0; color: #4e2529; font-size: 13px; }
 
 .colophon {
   display: flex;
