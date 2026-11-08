@@ -440,6 +440,32 @@ textarea::placeholder { color: rgba(54, 13, 19, 0.55); }
 textarea { resize: vertical; min-height: 110px; }
 .form-note { color: var(--cream); font-size: 13px; }
 
+.reviews {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.reviews li {
+  margin: 0;
+  padding: 22px 18px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(244, 238, 228, 0.22);
+  background: rgba(42, 10, 16, 0.35);
+}
+.stars {
+  margin: 0 0 12px;
+  color: #c1b398;
+  letter-spacing: 0.14em;
+  font-size: 14px;
+}
+.review-title { margin: 0 0 8px; font-size: 17px; }
+.reviews blockquote { margin: 0; padding: 0; border: 0; }
+.reviews blockquote p { margin: 0; font-size: 15px; line-height: 1.5; }
+.review-name { margin: 16px 0 0; }
+.review-meta { margin: 2px 0 0; color: #c1b398; font-size: 13px; }
+
 .colophon {
   display: flex;
   justify-content: space-between;
@@ -579,6 +605,7 @@ textarea { resize: vertical; min-height: 110px; }
   .hero-copy { padding-left: 64px; }
   .band { padding: 110px 64px; }
   .steps { grid-template-columns: repeat(4, 1fr); }
+  .reviews { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .contact-grid {
     grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1fr);
     gap: 48px;
