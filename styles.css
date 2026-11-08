@@ -405,8 +405,9 @@ textarea:focus-visible {
   border: 0;
 }
 .objetivo blockquote p {
-  margin: 0;
-  max-width: none;
+  margin: 0 auto;
+  max-width: 46em;
+  text-align: center;
   color: #c1b398;
   font-family: var(--serif);
   font-weight: 400;
