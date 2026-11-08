@@ -405,16 +405,17 @@ textarea:focus-visible {
   border: 0;
 }
 .objetivo blockquote p {
-  margin: 0 auto;
-  max-width: 46em;
+  margin: 0;
+  max-width: none;
   text-align: center;
   color: #c1b398;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(18px, 1.7vw, 23px);
+  font-size: clamp(14px, 1.15vw, 20px);
   line-height: 1.45;
+  white-space: nowrap;
 }
-.objetivo blockquote p .segue { display: block; }
+.objetivo blockquote p .segue { display: block; white-space: nowrap; }
 .objetivo blockquote p .fim { white-space: nowrap; }
 
 .contact-grid { display: grid; gap: 28px; }
@@ -691,6 +692,8 @@ textarea { resize: vertical; min-height: 110px; }
 }
 
 @media (max-width: 900px) {
+  .objetivo blockquote p,
+  .objetivo blockquote p .segue { white-space: normal; }
   .brand {
     position: absolute;
     top: calc(10px + env(safe-area-inset-top));
