@@ -491,7 +491,7 @@ textarea { resize: vertical; min-height: 110px; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 68% 42%;
+  object-position: 58% 38%;
 }
 .why-media::after {
   content: "";
@@ -522,6 +522,20 @@ textarea { resize: vertical; min-height: 110px; }
   padding-left: 14px;
   border-left: 2px solid #c1b398;
 }
+.razoes {
+  list-style: none;
+  margin: 36px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+  max-width: 46em;
+}
+.razoes li {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.45;
+}
+.razoes strong { color: #c1b398; font-weight: 500; }
 
 .wa {
   position: fixed;
@@ -561,6 +575,7 @@ textarea { resize: vertical; min-height: 110px; }
 [data-rise][data-from="left"] { transform: translateX(-92px); }
 [data-rise][data-from="right"] { transform: translateX(92px); }
 [data-rise][data-from="up"] { transform: translateY(88px); }
+[data-rise][data-from="down"] { transform: translateY(-72px); }
 [data-rise].in {
   opacity: 1;
   transform: none;
@@ -583,7 +598,7 @@ textarea { resize: vertical; min-height: 110px; }
 
 @media (min-width: 980px) {
   .why-copy { padding: 120px 64px; }
-  .why-media img { object-position: 72% 40%; }
+  .why-media img { object-position: 62% 36%; }
   .top { padding: 6px 36px; }
   .rail-nav { flex-wrap: nowrap; gap: 22px; }
   .rail-nav a:first-child { display: inline; }
